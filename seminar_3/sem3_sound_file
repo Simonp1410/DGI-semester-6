@@ -19,14 +19,23 @@ audio_data_size_in_bytes=data[40:44]
 audio_data_size = int.from_bytes(audio_data_size_in_bytes, byteorder="little")
 print('Звуковые данные', audio_data_size)
 
+sample_rate_in_byte = data[24:28]
+sample_rate = int.from_bytes(sample_rate_in_byte, byteorder='little')
+print('Частота дискретизации', sample_rate)
+
 audio_amps = []
 for i in range (0,audio_data_size,2):
     amp_in_byte=data[44+i:44+i+2]
     amp = int.from_bytes(amp_in_byte, byteorder="little", signed=True)
     audio_amps.append(amp)
 print(audio_amps)
+print(len(audio_amps))
+
+
 
 plt.plot(range(len(audio_amps)),audio_amps)
 plt.show()
+
+
 
 pass
