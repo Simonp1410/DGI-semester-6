@@ -1,4 +1,0 @@
-def my_func():
-    my_var = 'Amazing!'
-    print(my_var)
-my_func()
