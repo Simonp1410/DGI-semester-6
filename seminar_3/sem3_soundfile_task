@@ -32,14 +32,11 @@ for i in range (0,audio_data_size,2):
 print(audio_amps)
 print(len(audio_amps))
 
-#xdata = range(-,len(audio_amps)/sample_rate, 1/sample_rate)
-
 xdata_time = np.linspace(0,len(audio_amps)/sample_rate, len(audio_amps))
 spectre = np.fft.fft(audio_amps)
 abs_spectre = abs(spectre)
 
 plt.plot(xdata_time, abs_spectre)
 plt.show()
-
 
 pass
