@@ -40,7 +40,9 @@ class MyWidget(QWidget):
 
     def select_file(self):
         filename, filter = QFileDialog.getOpenFileName()
+        self.audio_item = Audio_Item(filename)
         self.myLable.setText(f'Выбранный файл: {filename}')
+        print(self.audio_item)
 
 
 
