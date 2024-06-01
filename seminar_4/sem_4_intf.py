@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QHBoxLayout, QVBoxLayout, QPushButton, QFileDialog
-from seminar_4.sound_file_converted import Audio_Item
+from seminar_4.soundfile_converted import Audio_Item
 
 class MyWidget(QWidget):
     def __init__(self):
